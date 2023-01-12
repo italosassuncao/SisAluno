@@ -10,9 +10,9 @@ public class ConnectionFactory {
 	public static Connection getConnection() throws Exception {
 		try {
 
-			Class.forName("com.mysql.jsbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 
-			return DriverManager.getConnection("jdbc.mysql://localhost:3306/sislauno", "root", "@Legale12@");
+			return DriverManager.getConnection("jdbc:mysql://localhost:3306/sisaluno", "root", "");
 
 		} catch (Exception erro) {
 			throw new Exception(erro.getMessage());
@@ -22,6 +22,14 @@ public class ConnectionFactory {
 
 	public static void closeConnection(Connection conn, Statement stmt, ResultSet rs) throws Exception {
 		close(conn, stmt, rs);
+	}
+	
+	public static void closeConnection(Connection conn, Statement stmt) throws Exception {
+		close(conn, stmt, null);
+	}
+	
+	public static void closeConnection(Connection conn) throws Exception {
+		close(conn, null, null);
 	}
 
 	private static void close(Connection conn, Statement stmt, ResultSet rs) throws Exception {
