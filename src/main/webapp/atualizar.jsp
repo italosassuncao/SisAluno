@@ -7,7 +7,7 @@
 <body>
     <center>
         <table border="1">
-            <form action="ServletAlunos?cmd=atu" method="post">
+            <form action="ServletAluno?cmd=atu" method="post">
             <tbody>
                 <tr>
                     <th colspan="2"><h2>Atualizar Alunos</h2></th>
