@@ -1,29 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Excluir Alunos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Excluir Alunos</title>
 </head>
 <body>
-<center>
-	<table border="1">
-	<form> 
-	<tbody>  		
-		<tr>
-			<th colspan="2"><h1>Excluir Alunos</h1></th>
-		</tr>	
-		<tr>
-			<td>CA do Aluno:</td> 
-			<td><input type = "text" name = "txtCa"  size="60" maxlength = "60"></td>
-			</tr>
-		<tr>
-		     <td colspan="2"><input type = "submit" value="Enviar"></td>
-		</tr>	
-	</tbody>  	
-	</form>
-	</table>
-	</center>
+    <center>
+        <table border="1">
+            <form action="ServletAluno?cmd=exc" method="post">
+            <tbody>
+                <tr>
+                    <th colspan="2"><h2>Excluir Alunos</h2></th>
+                </tr>
+                <tr>
+                    <td>CA do Aluno:</td>
+                    <td>
+                        <input type="text" name="txtCa" size="10" maxlenght="10" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Enviar"></td>
+                </tr>
+
+            </tbody>
+           </form>
+        </table>
+    </center>
+
 </body>
 </html>
